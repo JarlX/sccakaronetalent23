@@ -32,17 +32,20 @@ INITIALIZATION.
 
 START-OF-SELECTION.
 
+
   CASE 'X'.
     WHEN p_topla.
     p_total = p_val1 + p_val2.
-    WHEN
-        p_cikar. p_total = p_val1 - p_val2.
-    WHEN
-        p_carp.  p_total = p_val1 * p_val2.
-    WHEN
-         p_bol.
-        TRY.
-           p_total = p_val1 / p_val2.
+
+    WHEN p_cikar.
+    p_total = p_val1 - p_val2.
+
+    WHEN p_carp.
+    p_total = p_val1 * p_val2.
+
+    WHEN p_bol.
+    TRY.
+    p_total = p_val1 / p_val2.
         CATCH cx_sy_zerodivide.
             cl_demo_output=>write( |Sıfıra bölme yapılamaz!| ).
 ENDTRY.
