@@ -3,20 +3,21 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <DD04V>
-    <ROLLNAME>ZOT_20_E_PERSONEL_EGTM_KODU</ROLLNAME>
+    <ROLLNAME>ZOT_20_E_TWEET_DESC</ROLLNAME>
     <DDLANGUAGE>E</DDLANGUAGE>
-    <DOMNAME>ZOT_20_D_PERSONEL_EGTM_KODU</DOMNAME>
     <HEADLEN>55</HEADLEN>
     <SCRLEN1>10</SCRLEN1>
     <SCRLEN2>20</SCRLEN2>
     <SCRLEN3>40</SCRLEN3>
-    <DDTEXT>Personel Eğitim Kodu</DDTEXT>
-    <REPTEXT>Personel Eğitim Kodu</REPTEXT>
-    <SCRTEXT_S>P. E. Kod</SCRTEXT_S>
-    <SCRTEXT_M>Personel Eğitim Kodu</SCRTEXT_M>
-    <SCRTEXT_L>Personel Eğitim Kodu</SCRTEXT_L>
+    <DDTEXT>Tweet Description</DDTEXT>
+    <REPTEXT>Tweet Description</REPTEXT>
+    <SCRTEXT_S>T. Desc</SCRTEXT_S>
+    <SCRTEXT_M>Tweet Description</SCRTEXT_M>
+    <SCRTEXT_L>Tweet Description</SCRTEXT_L>
     <DTELMASTER>E</DTELMASTER>
-    <REFKIND>D</REFKIND>
+    <DATATYPE>CHAR</DATATYPE>
+    <LENG>000080</LENG>
+    <OUTPUTLEN>000080</OUTPUTLEN>
    </DD04V>
   </asx:values>
  </asx:abap>
