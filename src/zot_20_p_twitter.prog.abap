@@ -45,19 +45,19 @@ AT SELECTION-SCREEN.
 
 
   CASE sy-ucomm.
-    WHEN 'cli1'.
+    WHEN 'CLI1'.
      APPEND VALUE #( mandt = sy-mandt
                       tweet_no = post_id
                       tweet_desc = post ) TO lt_twitter.
       INSERT zot_20_t_twtable FROM TABLE lt_twitter.
       COMMIT WORK.
 
-      WHEN 'cli2'.
+      WHEN 'CLI2'.
       DELETE FROM zot_20_t_twtable
         WHERE tweet_no = post_id.
       COMMIT WORK.
 
-      WHEN 'cli3'.
+      WHEN 'CLI3'.
       ls_twitter-tweet_no = post_id.
       ls_twitter-tweet_desc = post.
       MODIFY zot_20_t_twtable
@@ -70,6 +70,6 @@ AT SELECTION-SCREEN.
         INTO TABLE @lt_twitter.
       LOOP AT lt_twitter INTO ls_twitter.
         cl_demo_output=>display( lt_twitter ).
-       cl_demo_output=>display(  ).
+        cl_demo_output=>display(  ).
       ENDLOOP.
   ENDCASE.
