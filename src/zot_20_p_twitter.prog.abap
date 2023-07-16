@@ -5,6 +5,8 @@
 *&---------------------------------------------------------------------*
 REPORT zot_20_p_twitter.
 
+*INCLUDE ZAB_I_DENEME.
+
 DATA: lt_twitter TYPE TABLE OF zot_20_t_twtable,
       ls_twitter TYPE zot_20_t_twtable.
 
@@ -14,7 +16,6 @@ SELECTION-SCREEN BEGIN OF BLOCK block1 WITH FRAME TITLE title001.
   SELECTION-SCREEN BEGIN OF BLOCK block2 WITH FRAME TITLE title002.
     PARAMETERS: post_id TYPE i,
                 post    TYPE char80.
-
   SELECTION-SCREEN END OF BLOCK block2.
 
   SELECTION-SCREEN BEGIN OF BLOCK block3 WITH FRAME TITLE title003.
@@ -27,7 +28,6 @@ SELECTION-SCREEN BEGIN OF BLOCK block1 WITH FRAME TITLE title001.
   SELECTION-SCREEN END OF BLOCK block3.
 
 SELECTION-SCREEN END OF BLOCK block1.
-
 
 INITIALIZATION.
   title001 = 'Twitter'.
@@ -43,6 +43,7 @@ INITIALIZATION.
 
 AT SELECTION-SCREEN.
 
+*START-OF-SELECTION.
 
   CASE sy-ucomm.
     WHEN 'CLI1'.
@@ -73,3 +74,5 @@ AT SELECTION-SCREEN.
         cl_demo_output=>display(  ).
       ENDLOOP.
   ENDCASE.
+
+  end-OF-SELECTION.
