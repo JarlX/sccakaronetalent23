@@ -16,6 +16,12 @@
      <ENTRY>Zaman Aralığı Hesap</ENTRY>
      <LENGTH>19</LENGTH>
     </item>
+    <item>
+     <ID>S</ID>
+     <KEY>ID2</KEY>
+     <ENTRY>ID</ENTRY>
+     <LENGTH>10</LENGTH>
+    </item>
    </TPOOL>
   </asx:values>
  </asx:abap>
