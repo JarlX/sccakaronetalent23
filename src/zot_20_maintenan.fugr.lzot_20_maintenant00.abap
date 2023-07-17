@@ -37,6 +37,12 @@ DATA:  BEGIN OF STATUS_ZOT_20_T_TWTABLE              .   "state vector
 DATA:  END OF STATUS_ZOT_20_T_TWTABLE              .
 CONTROLS: TCTRL_ZOT_20_T_TWTABLE
             TYPE TABLEVIEW USING SCREEN '0006'.
+*...processing: ZOT_20_T_ZAMAN..................................*
+DATA:  BEGIN OF STATUS_ZOT_20_T_ZAMAN                .   "state vector
+         INCLUDE STRUCTURE VIMSTATUS.
+DATA:  END OF STATUS_ZOT_20_T_ZAMAN                .
+CONTROLS: TCTRL_ZOT_20_T_ZAMAN
+            TYPE TABLEVIEW USING SCREEN '0007'.
 *.........table declarations:.................................*
 TABLES: *ZOT_20_T_P_AILE               .
 TABLES: *ZOT_20_T_P_ATUR               .
@@ -44,12 +50,14 @@ TABLES: *ZOT_20_T_P_ETUR               .
 TABLES: *ZOT_20_T_P_ITUR               .
 TABLES: *ZOT_20_T_P_MAST               .
 TABLES: *ZOT_20_T_TWTABLE              .
+TABLES: *ZOT_20_T_ZAMAN                .
 TABLES: ZOT_20_T_P_AILE                .
 TABLES: ZOT_20_T_P_ATUR                .
 TABLES: ZOT_20_T_P_ETUR                .
 TABLES: ZOT_20_T_P_ITUR                .
 TABLES: ZOT_20_T_P_MAST                .
 TABLES: ZOT_20_T_TWTABLE               .
+TABLES: ZOT_20_T_ZAMAN                 .
 
 * general table data declarations..............
   INCLUDE LSVIMTDT                                .
