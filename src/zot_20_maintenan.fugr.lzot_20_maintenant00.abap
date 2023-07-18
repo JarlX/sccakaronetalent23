@@ -1,6 +1,12 @@
 *---------------------------------------------------------------------*
 *    view related data declarations
 *---------------------------------------------------------------------*
+*...processing: ZOT_20_T_MATERIA................................*
+DATA:  BEGIN OF STATUS_ZOT_20_T_MATERIA              .   "state vector
+         INCLUDE STRUCTURE VIMSTATUS.
+DATA:  END OF STATUS_ZOT_20_T_MATERIA              .
+CONTROLS: TCTRL_ZOT_20_T_MATERIA
+            TYPE TABLEVIEW USING SCREEN '0008'.
 *...processing: ZOT_20_T_P_AILE.................................*
 DATA:  BEGIN OF STATUS_ZOT_20_T_P_AILE               .   "state vector
          INCLUDE STRUCTURE VIMSTATUS.
@@ -44,6 +50,7 @@ DATA:  END OF STATUS_ZOT_20_T_ZAMAN                .
 CONTROLS: TCTRL_ZOT_20_T_ZAMAN
             TYPE TABLEVIEW USING SCREEN '0007'.
 *.........table declarations:.................................*
+TABLES: *ZOT_20_T_MATERIA              .
 TABLES: *ZOT_20_T_P_AILE               .
 TABLES: *ZOT_20_T_P_ATUR               .
 TABLES: *ZOT_20_T_P_ETUR               .
@@ -51,6 +58,7 @@ TABLES: *ZOT_20_T_P_ITUR               .
 TABLES: *ZOT_20_T_P_MAST               .
 TABLES: *ZOT_20_T_TWTABLE              .
 TABLES: *ZOT_20_T_ZAMAN                .
+TABLES: ZOT_20_T_MATERIA               .
 TABLES: ZOT_20_T_P_AILE                .
 TABLES: ZOT_20_T_P_ATUR                .
 TABLES: ZOT_20_T_P_ETUR                .

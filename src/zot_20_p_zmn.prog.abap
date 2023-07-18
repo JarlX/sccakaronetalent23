@@ -11,7 +11,7 @@ DATA: lt_zaman TYPE TABLE OF zot_20_t_zaman,
 
 SELECTION-SCREEN BEGIN OF BLOCK b1 WITH FRAME TITLE TEXT-001.
 
-  SELECT-OPTIONS id2 FOR ls_zaman-id.
+  SELECT-OPTIONS tarih_id FOR ls_zaman-id.
 
 SELECTION-SCREEN END OF BLOCK b1.
 
@@ -20,7 +20,7 @@ START-OF-SELECTION.
   SELECT *
            INTO TABLE lt_zaman
            FROM zot_20_t_zaman
-           WHERE id IN id2.
+           WHERE id IN tarih_id.
 
   DATA: lv_tarih1     TYPE dats,
         lv_tarih2     TYPE dats,
