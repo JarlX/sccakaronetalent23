@@ -88,7 +88,7 @@ DATA: gt_materialasc TYPE TABLE OF  zot_00_t_materia,
 SORT gt_materialcon ASCENDING BY menge.
 APPEND LINES OF gt_materialcon TO gt_materialasc.
 
-SORT gt_materialcon DESCENDING By menge.
+SORT gt_materialcon DESCENDING BY menge.
 APPEND LINES OF gt_materialcon TO gt_materialdsc.
 
 
