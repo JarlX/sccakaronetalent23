@@ -16,6 +16,42 @@
      <ENTRY>SAT-SAS Report</ENTRY>
      <LENGTH>14</LENGTH>
     </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SASBTN</KEY>
+     <ENTRY> SAS</ENTRY>
+     <LENGTH>12</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SATBTN</KEY>
+     <ENTRY> SAT</ENTRY>
+     <LENGTH>12</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SBANFN</KEY>
+     <ENTRY> Satın Alma No.</ENTRY>
+     <LENGTH>23</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SBNFPO</KEY>
+     <ENTRY> Satın Alma Kalem No.</ENTRY>
+     <LENGTH>29</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SEBELN</KEY>
+     <ENTRY> Satın Alma Belge No.</ENTRY>
+     <LENGTH>29</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SMATKL</KEY>
+     <ENTRY> Malzeme Grubu</ENTRY>
+     <LENGTH>22</LENGTH>
+    </item>
    </TPOOL>
   </asx:values>
  </asx:abap>

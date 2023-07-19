@@ -22,7 +22,7 @@ SELECTION-SCREEN END OF BLOCK block1.
 SELECTION-SCREEN BEGIN OF BLOCK block2 WITH FRAME TITLE text002.
 
   SELECT-OPTIONS: smatkl FOR gv_matkl,
-                  sebdln FOR gv_ebeln.
+                  sebeln FOR gv_ebeln.
 
 SELECTION-SCREEN END OF BLOCK block2.
 
@@ -50,7 +50,7 @@ SELECT ekpo~matnr,
        ekpo~matkl,
        ekpo~ebeln FROM ekpo INNER JOIN eban
        ON ekpo~banfn = eban~banfn AND ekpo~bnfpo = eban~bnfpo
-       WHERE ekpo~matkl IN @smatkl AND ekpo~ebeln IN @sebdln
+       WHERE ekpo~matkl IN @smatkl AND ekpo~ebeln IN @sebeln
        INTO TABLE @DATA(lt_ekpo).
 
 START-OF-SELECTION.
