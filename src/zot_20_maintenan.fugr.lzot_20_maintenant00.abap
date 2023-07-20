@@ -37,6 +37,12 @@ DATA:  BEGIN OF STATUS_ZOT_20_T_P_MAST               .   "state vector
 DATA:  END OF STATUS_ZOT_20_T_P_MAST               .
 CONTROLS: TCTRL_ZOT_20_T_P_MAST
             TYPE TABLEVIEW USING SCREEN '0004'.
+*...processing: ZOT_20_T_TEAMS..................................*
+DATA:  BEGIN OF STATUS_ZOT_20_T_TEAMS                .   "state vector
+         INCLUDE STRUCTURE VIMSTATUS.
+DATA:  END OF STATUS_ZOT_20_T_TEAMS                .
+CONTROLS: TCTRL_ZOT_20_T_TEAMS
+            TYPE TABLEVIEW USING SCREEN '0009'.
 *...processing: ZOT_20_T_TWTABLE................................*
 DATA:  BEGIN OF STATUS_ZOT_20_T_TWTABLE              .   "state vector
          INCLUDE STRUCTURE VIMSTATUS.
@@ -56,6 +62,7 @@ TABLES: *ZOT_20_T_P_ATUR               .
 TABLES: *ZOT_20_T_P_ETUR               .
 TABLES: *ZOT_20_T_P_ITUR               .
 TABLES: *ZOT_20_T_P_MAST               .
+TABLES: *ZOT_20_T_TEAMS                .
 TABLES: *ZOT_20_T_TWTABLE              .
 TABLES: *ZOT_20_T_ZAMAN                .
 TABLES: ZOT_20_T_MATERIA               .
@@ -64,6 +71,7 @@ TABLES: ZOT_20_T_P_ATUR                .
 TABLES: ZOT_20_T_P_ETUR                .
 TABLES: ZOT_20_T_P_ITUR                .
 TABLES: ZOT_20_T_P_MAST                .
+TABLES: ZOT_20_T_TEAMS                 .
 TABLES: ZOT_20_T_TWTABLE               .
 TABLES: ZOT_20_T_ZAMAN                 .
 

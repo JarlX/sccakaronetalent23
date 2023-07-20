@@ -44,6 +44,15 @@ SELECT eban~matnr,
        WHERE eban~banfn IN @sbanfn AND eban~bnfpo IN @sbnfpo
        INTO TABLE @DATA(lt_eban).
 
+*LOOP AT lt_eban INTO  DATA(ls_eban).
+*    IF ls_eban-menge < 10.
+*         ls_eban-color = 'C511'.
+*        MODIFY lt_eban FROM ls_eban.
+*    ENDIF.
+*ENDLOOP.
+
+
+
 SELECT ekpo~matnr,
        ekpo~menge,
        ekpo~meins,
