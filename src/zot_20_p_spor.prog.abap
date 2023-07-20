@@ -48,7 +48,6 @@ WHILE lines( lt_box ) > 0.
 
       READ TABLE lt_team INTO ls_team WITH KEY teamcountry = ls_team-teamcountry.
       IF sy-subrc NE 0.
-
         IF sy-index EQ 1.
           READ TABLE lt_grouptb INTO ls_team-teamname WITH KEY group1-box_id = ls_team-box.
           IF sy-subrc NE 0.
@@ -75,7 +74,6 @@ WHILE lines( lt_box ) > 0.
   ENDDO.
   APPEND ls_grouptb TO lt_grouptb.
 
-  cl_demo_output=>line(  ).
   cl_demo_output=>write( lt_grouptb[ sy-index ]-group1-team_name ).
   cl_demo_output=>write( lt_grouptb[ sy-index ]-group2-team_name ).
   cl_demo_output=>write( lt_grouptb[ sy-index ]-group3-team_name ).
