@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesigner_V11.0.1.20160812.1.925753_SAP" APIVersion="3.6.16186.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2023-07-20T22:41:50Z" uuid="49a2500f-1ee9-4a69-8471-32b01d1a4fdb">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2023-07-21T07:48:36Z" uuid="49a2500f-1ee9-4a69-8471-32b01d1a4fdb">
 <template xmlns:xliff="urn:oasis:names:tc:xliff:document:1.1" xmlns="http://www.xfa.org/schema/xfa-template/3.3/">
    <?formServer defaultPDFRenderFormat acrobat10.0dynamic?>
    <subform layout="tb" locale="tr_TR" name="data" restoreState="auto">
@@ -33,7 +33,7 @@
                   <text name="Schema Annotation">User Name</text>
                </desc>
             </field>
-            <draw h="44.45mm" name="Image1" w="88.9mm" y="12.7mm">
+            <draw h="44.45mm" name="Image1" w="69.85mm" x="12.7mm" y="12.7mm">
                <ui>
                   <imageEdit/>
                </ui>
@@ -1696,7 +1696,7 @@ AAAAAACMUAAAAAAAAAAAjFAAAAAAAAAAAEwG4UosBLiSKAAAAABJRU5ErkJggg==</image>
                <?templateDesigner floatingFieldPlaceholder ##?>
                <bind match="none"/>
             </field>
-            <field h="19.05mm" w="60.325mm" x="9.525mm" y="241.3mm">
+            <field h="19.05mm" name="IV_BARCODE" w="60.325mm" x="9.525mm" y="241.3mm">
                <ui>
                   <barcode checksum="auto" dataLength="10" textLocation="belowEmbedded" type="code128B" wideNarrowRatio="fixed"/>
                </ui>
@@ -1704,7 +1704,7 @@ AAAAAACMUAAAAAAAAAAAjFAAAAAAAAAAAEwG4UosBLiSKAAAAABJRU5ErkJggg==</image>
                <value>
                   <text xliff:rid="88A0C34C-471C-49F8-932D-16061209F471">444444444</text>
                </value>
-               <bind match="none"/>
+               <bind match="dataRef" ref="$.IV_BARCODE"/>
                <validate nullTest="warning">
                   <script contentType="application/x-javascript">this.isNull || (this.rawValue &gt;= -Math.pow(2,63) &amp;&amp; this.rawValue &lt;= (Math.pow(2,63)-1));
 
@@ -1713,6 +1713,21 @@ AAAAAACMUAAAAAAAAAAAjFAAAAAAAAAAAEwG4UosBLiSKAAAAABJRU5ErkJggg==</image>
                      <text name="nullTest"/>
                   </message>
                </validate>
+               <desc>
+                  <text name="Schema Annotation">Character Field with Length 10</text>
+               </desc>
+            </field>
+            <field access="readOnly" h="25.4mm" name="GV_QRCODE" w="25.4mm" x="161.925mm" y="234.95mm">
+               <ui>
+                  <barcode dataLength="10" errorCorrectionLevel="1" moduleHeight="0.0167in" moduleWidth="0.0167in" type="QRCode"/>
+               </ui>
+               <value>
+                  <text xliff:rid="F43D4F86-1A0B-43AB-AE4D-8282739BF36F">1234567890</text>
+               </value>
+               <bind match="dataRef" ref="$.GV_QRCODE"/>
+               <desc>
+                  <text name="Schema Annotation">Char 80</text>
+               </desc>
             </field>
          </pageArea>
          <?templateDesigner expand 0?></pageSet>
@@ -1913,7 +1928,7 @@ AAAAAACMUAAAAAAAAAAAjFAAAAAAAAAAAEwG4UosBLiSKAAAAABJRU5ErkJggg==</image>
                   </ui>
                   <font size="14pt" typeface="Arial" weight="bold"/>
                   <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
-                  <para vAlign="middle" hAlign="center"/>
+                  <para hAlign="center" vAlign="middle"/>
                   <value>
                      <integer/>
                   </value>
@@ -1958,8 +1973,8 @@ AAAAAACMUAAAAAAAAAAAjFAAAAAAAAAAAEwG4UosBLiSKAAAAABJRU5ErkJggg==</image>
    <?acrobat JavaScript strictScoping?>
    <?templateDesigner Grid show:1, snap:1, units:0, color:ff8080, origin:(0,0), interval:(125000,125000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner FormTargetVersion 33?>
-   <?templateDesigner Zoom 116?>
-   <?templateDesigner Rulers horizontal:0, vertical:0, guidelines:1, crosshairs:0?></template>
+   <?templateDesigner Rulers horizontal:0, vertical:0, guidelines:1, crosshairs:0?>
+   <?templateDesigner Zoom 116?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -2028,6 +2043,8 @@ AAAAAACMUAAAAAAAAAAAjFAAAAAAAAAAAEwG4UosBLiSKAAAAABJRU5ErkJggg==</image>
             <CARR_URL/>
          </GS_CARR>
          <GV_COUNTER/>
+         <IV_BARCODE/>
+         <GV_QRCODE/>
       </data>
    </dd:dataDescription>
 </xfa:datasets>
@@ -2139,7 +2156,7 @@ AAAAAACMUAAAAAAAAAAAjFAAAAAAAAAAAEwG4UosBLiSKAAAAABJRU5ErkJggg==</image>
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.4-c005 78.150055, 2013/08/07-22:58:47        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:pdf="http://ns.adobe.com/pdf/1.3/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
-         <xmp:MetadataDate>2023-07-20T22:41:50Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2023-07-21T07:48:36Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer 11.0</xmp:CreatorTool>
          <pdf:Producer>Adobe LiveCycle Designer 11.0</pdf:Producer>
          <xmpMM:DocumentID>uuid:49a2500f-1ee9-4a69-8471-32b01d1a4fdb</xmpMM:DocumentID>

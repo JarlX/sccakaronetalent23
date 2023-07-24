@@ -40,10 +40,10 @@
     <CL_FP_GLOBAL_DEFINITIONS classVersion="1">
      <GLOBAL_DATA>
       <SFPGDATA>
-       <NAME>GV_BARCODE</NAME>
-       <TYPING/>
-       <TYPENAME>INT8</TYPENAME>
-       <DEFAULTVAL/>
+       <NAME>GV_QRCODE</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>CHAR80</TYPENAME>
+       <DEFAULTVAL>&apos;https://www.youtube.com/watch?v=DjUjWO1KRTY&amp;ab_channel=Asr%C4%B1nY%C4%B1ld%C4%B1z&apos;</DEFAULTVAL>
        <CONSTANT/>
       </SFPGDATA>
       <SFPGDATA>
@@ -86,7 +86,18 @@
      <INTERFACE_DATA href="#o1"/>
     </CL_FP_INTERFACE_DATA_CHANGED>
     <CL_FP_PARAMETERS classVersion="1">
-     <IMPORT_PARAMETERS/>
+     <IMPORT_PARAMETERS>
+      <SFPIOPAR>
+       <NAME>IV_BARCODE</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>CHAR10</TYPENAME>
+       <OPTIONAL/>
+       <BYVALUE>X</BYVALUE>
+       <DEFAULTVAL/>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+     </IMPORT_PARAMETERS>
      <EXPORT_PARAMETERS/>
      <TABLE_PARAMETERS/>
      <EXCEPTIONS/>
